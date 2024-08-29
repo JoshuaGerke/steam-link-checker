@@ -119,11 +119,11 @@ const scamLinks = [
 
 const testLink = ref('');
 
-function normalizeUrl(url) {
+function normalizeUrl(url: string) {
   return url.replace(/^(https?:\/\/)?/, '').toLowerCase();
 }
 
-const checkLink = (url) => {
+const checkLink = (url: string) => {
   const normalizedUrl = normalizeUrl(url);
   if (officialLinks.includes(normalizedUrl)) {
     return 'This link is official and safe! 😍';
